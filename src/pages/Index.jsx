@@ -8,6 +8,7 @@ import {
   Heading, 
   IconButton, 
   Input, 
+  Link, 
   List, 
   ListItem, 
   Text, 
@@ -41,7 +42,10 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" py={10}>
       <VStack spacing={4} width="100%">
-        <Heading as="h1" size="xl" mb={6}>Procrastination List</Heading>
+        <Box as="header" width="100%" mb={6} textAlign="center">
+          <Heading as="h1" size="2xl">Procrastination List</Heading>
+          <Text fontSize="lg" color="gray.600">Your ultimate tool to manage procrastination effectively.</Text>
+        </Box>
         <Flex width="100%" mb={4}>
           <Input
             placeholder="Add a new todo"
@@ -71,6 +75,10 @@ const Index = () => {
             </ListItem>
           ))}
         </List>
+        <Box as="footer" width="100%" mt={10} textAlign="center" borderTop="1px" borderColor="gray.200" pt={4}>
+          <Text fontSize="sm" color="gray.500">© 2023 Procrastination List</Text>
+          <Link href="https://github.com/your-repo" color="blue.500" isExternal>GitHub Repository</Link>
+        </Box>
       </VStack>
     </Container>
   );
